@@ -30,6 +30,7 @@ event_registration.admin_dashboard:
   requirements:
     _permission: 'access event registrations'
 
+
 event_registration.export_csv:
   path: '/admin/event-registration/export/{eventId}'
   defaults:

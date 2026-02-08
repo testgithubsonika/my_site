@@ -12,6 +12,6 @@ view event registrations:
   description: 'Allow users to view event registration lists.'
 
 access event registrations:
-  title: 'Access Event Registration Admin Page'
+  title: 'Access Event Registration Admin Page and Dashboard'
   description: 'Allows users to view event registrations dashboard'
 
