@@ -62,11 +62,12 @@ function event_registration_schema() {
         'length' => 255,
       ],
  
- 
+
       'email' => [
         'type' => 'varchar',
         'length' => 255,
       ],
+      
 
       'college_name' => [
         'type' => 'varchar',
