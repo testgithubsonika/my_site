@@ -62,7 +62,11 @@ extension=pgsql for posgresql and other extension like
 
 curl, opcache.
 
-update extension_dir path and serverRoot then for email service find [root function] in php.ini file and add STMP EMAIL , SMPT PORT etc.
+update extension_dir path and serverRoot then for email 
+
+service find [root function] in php.ini file and add 
+
+STMP EMAIL , SMPT PORT etc.
 
 
 
