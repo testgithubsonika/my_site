@@ -56,7 +56,11 @@ web/modules/custom/event_registration
 ``
 Install PHP [if not installed] version - PHP 8.1.34 (cli) 
 
-In php.ini uncomment extension=pdo_pgsql  and extension=pgsql for posgresql and other extension like curl, opcache.
+In php.ini uncomment extension=pdo_pgsql  and 
+
+extension=pgsql for posgresql and other extension like 
+
+curl, opcache.
 
 update extension_dir path and serverRoot then for email service find [root function] in php.ini file and add STMP EMAIL , SMPT PORT etc.
 
