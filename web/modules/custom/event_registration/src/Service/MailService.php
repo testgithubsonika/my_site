@@ -44,8 +44,10 @@ class MailService {
     }
   }
 
+
   private function sendMail($to, $data) {
 
+  
     $params = [
       'full_name' => $data['full_name'],
       'event_name' => $data['event_name'],

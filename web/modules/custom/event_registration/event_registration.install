@@ -61,7 +61,8 @@ function event_registration_schema() {
         'type' => 'varchar',
         'length' => 255,
       ],
-
+ 
+ 
       'email' => [
         'type' => 'varchar',
         'length' => 255,

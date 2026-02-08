@@ -7,6 +7,7 @@ create event registration:
   title: 'Create Event'
   description: 'Allow users to create new events.'
 
+
 view event registrations:
   title: 'View Event Registrations'
   description: 'Allow users to view event registration lists.'

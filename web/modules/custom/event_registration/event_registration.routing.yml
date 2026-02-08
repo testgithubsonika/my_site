@@ -22,6 +22,7 @@ event_registration.register:
   requirements:
     _permission: 'access content'
 
+
 event_registration.admin_dashboard:
   path: '/admin/event-registration/dashboard'
   defaults:
@@ -29,6 +30,7 @@ event_registration.admin_dashboard:
     _title: 'Event Dashboard'
   requirements:
     _permission: 'access event registrations'
+
 
 
 event_registration.export_csv:
