@@ -211,6 +211,7 @@ class AdminFilterForm extends FormBase implements ContainerInjectionInterface {
 
     $count = count($rows);
 
+    
     return [
       'count' => [
         '#markup' => '<h3>Total Participants: ' . $count . '</h3>',
@@ -226,7 +227,7 @@ class AdminFilterForm extends FormBase implements ContainerInjectionInterface {
         '#attributes' => ['class' => ['button', 'button--primary']],
       ],
 
-      
+
       'table' => [
         '#type' => 'table',
         '#header' => $header,
