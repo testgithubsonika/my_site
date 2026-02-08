@@ -63,8 +63,6 @@ class RegistrationController extends ControllerBase {
       ];
     }
 
-
-
     // Convert to CSV string
     $handle = fopen('php://temp', 'r+');
 

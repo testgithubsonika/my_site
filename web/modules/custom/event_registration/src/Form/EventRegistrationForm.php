@@ -32,7 +32,6 @@ class EventRegistrationForm extends FormBase {
 
     $form['#attached']['library'][] = 'event_registration/form_styles';
 
-    
     // Fetch available categories
 
     $categories = $this->getActiveCategories();
