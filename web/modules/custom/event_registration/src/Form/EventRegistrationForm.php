@@ -33,6 +33,7 @@ class EventRegistrationForm extends FormBase {
     $form['#attached']['library'][] = 'event_registration/form_styles';
 
     // Fetch available categories
+    
     $categories = $this->getActiveCategories();
 
     $form['full_name'] = [
@@ -40,6 +41,7 @@ class EventRegistrationForm extends FormBase {
       '#title' => 'Full Name',
       '#required' => TRUE,
     ];
+
 
     $form['email'] = [
       '#type' => 'email',

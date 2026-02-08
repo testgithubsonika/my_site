@@ -15,7 +15,6 @@ class AdminSettingsForm extends ConfigFormBase {
     return 'event_registration_admin_settings_form';
   }
 
-  
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     $form['#attached']['library'][] = 'event_registration/form_styles';
@@ -36,6 +35,7 @@ class AdminSettingsForm extends ConfigFormBase {
     ];
 
     return parent::buildForm($form, $form_state);
+    
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {

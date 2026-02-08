@@ -15,7 +15,6 @@ class EventConfigForm extends FormBase {
     $this->database = $database;
   }
   
-
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('database')

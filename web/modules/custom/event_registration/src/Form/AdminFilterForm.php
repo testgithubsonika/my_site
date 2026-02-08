@@ -226,6 +226,7 @@ class AdminFilterForm extends FormBase implements ContainerInjectionInterface {
         '#attributes' => ['class' => ['button', 'button--primary']],
       ],
 
+      
       'table' => [
         '#type' => 'table',
         '#header' => $header,
