@@ -1,0 +1,8 @@
+# services: {}
+services:
+  event_registration.mail_service:
+    class: Drupal\event_registration\Service\MailService
+    arguments:
+      - '@plugin.manager.mail'
+      - '@config.factory'
+      - '@logger.factory'

@@ -1,0 +1,65 @@
+<div class="admin-dashboard">
+
+  <h2>{{ title }}</h2>
+
+  {# ===== Analytics Cards ===== #}
+  <div class="dashboard-grid">
+
+    <div class="dashboard-card">
+      <h3>Total Participants</h3>
+      <div class="value">{{ count }}</div>
+    </div>
+
+    {% for row in summary %}
+      <div class="dashboard-card">
+        <h3>{{ row.category }}</h3>
+        <div class="value">{{ row.count }}</div>
+      </div>
+    {% endfor %}
+
+  </div>
+
+  {# ===== Filter Panel ===== #}
+  <div class="filter-panel">
+    {% if export_url is defined and export_url %}
+      <a href="{{ export_url }}" class="button button--primary" target="_blank">Export CSV</a>
+      <br><br>
+    {% endif %}
+    {# filter_form is rendered outside the dashboard; do not render it here #}
+  </div>
+
+  {# ===== Registrations Table ===== #}
+  <div class="registrations">
+    {% if items is defined and items %}
+      <table class="registrations-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>College</th>
+            <th>Department</th>
+            <th>Submission Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+            <tr>
+              <td>{{ item.name }}</td>
+              <td>{{ item.email }}</td>
+              <td>{{ item.college }}</td>
+              <td>{{ item.department }}</td>
+              <td>{{ item.submitted }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No registrations found.</p>
+    {% endif %}
+  </div>
+
+  <div class="pager">
+    {{ pager is defined ? pager|raw : '' }}
+  </div>
+
+</div>

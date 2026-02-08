@@ -1,0 +1,23 @@
+admin_dashboard:
+  css:
+    theme:
+      css/admin-dashboard.css: {}
+
+dashboard:
+  css:
+    theme:
+      css/dashboard.css: {}
+
+dashboard_styles:
+  css:
+    theme:
+      css/dashboard.css: {}
+  js:
+    js/dashboard.js: {}
+
+form_styles:
+  css:
+    theme:
+      css/forms.css: {}
+  dependencies:
+    - core/drupal
