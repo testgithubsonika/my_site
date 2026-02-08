@@ -15,6 +15,7 @@ class AdminSettingsForm extends ConfigFormBase {
     return 'event_registration_admin_settings_form';
   }
 
+  
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     $form['#attached']['library'][] = 'event_registration/form_styles';
