@@ -8,6 +8,7 @@ dashboard:
     theme:
       css/dashboard.css: {}
 
+
 dashboard_styles:
   css:
     theme:

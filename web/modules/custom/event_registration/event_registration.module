@@ -23,7 +23,6 @@ function event_registration_mail($key, &$message, $params) {
   }
 }
 
-
 /**
  * Implements hook_theme().
  */

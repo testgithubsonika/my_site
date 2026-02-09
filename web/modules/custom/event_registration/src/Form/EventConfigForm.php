@@ -59,6 +59,7 @@ class EventConfigForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    
     $form['event_date'] = [
       '#type' => 'date',
       '#title' => 'Event Date',

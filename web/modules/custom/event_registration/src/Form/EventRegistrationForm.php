@@ -6,6 +6,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Database\Connection;
+use Drupal\Core\Render\Markup;
 
 class EventRegistrationForm extends FormBase {
 
@@ -31,6 +32,7 @@ class EventRegistrationForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     $form['#attached']['library'][] = 'event_registration/form_styles';
+
 
     // Fetch available categories
 
@@ -62,6 +64,7 @@ class EventRegistrationForm extends FormBase {
     ];
 
     // CATEGORY DROPDOWN
+
     $form['category'] = [
       '#type' => 'select',
       '#title' => 'Event Category',
@@ -74,6 +77,7 @@ class EventRegistrationForm extends FormBase {
     ];
 
     // Preserve selected values during rebuilds and force default handling
+
     $selectedCategory = $form_state->getValue('category') ?? NULL;
     $selectedDate = $form_state->getValue('event_date') ?? NULL;
 
@@ -211,15 +215,18 @@ class EventRegistrationForm extends FormBase {
     $pattern = "/^[a-zA-Z ]+$/";
 
     if (!preg_match($pattern, $name)) {
-      $form_state->setErrorByName('full_name', 'Special characters are not allowed in name.');
+      $errorMsg = Markup::create('<strong>⚠️ Special Characters Not Allowed</strong><br><small>Please use only letters and spaces in your name.</small>');
+      $form_state->setErrorByName('full_name', $errorMsg);
     }
 
     if (!preg_match($pattern, $college)) {
-      $form_state->setErrorByName('college_name', 'Special characters are not allowed in college name.');
+      $errorMsg = Markup::create('<strong>⚠️ Special Characters Not Allowed</strong><br><small>Please use only letters and spaces in your college name.</small>');
+      $form_state->setErrorByName('college_name', $errorMsg);
     }
 
     if (!preg_match($pattern, $department)) {
-      $form_state->setErrorByName('department', 'Special characters are not allowed in department.');
+      $errorMsg = Markup::create('<strong>⚠️ Special Characters Not Allowed</strong><br><small>Please use only letters and spaces in your department.</small>');
+      $form_state->setErrorByName('department', $errorMsg);
     }
 
     // ---------------------
@@ -240,7 +247,8 @@ class EventRegistrationForm extends FormBase {
       $exists = $query->execute()->fetchField();
 
       if ($exists) {
-        $form_state->setErrorByName('email', 'You have already registered for this event.');
+        $errorMsg = Markup::create('<strong>❌ Already Registered</strong><br><small>You have already registered for this event with this email address.</small>');
+        $form_state->setErrorByName('email', $errorMsg);
       }
     }
   }
