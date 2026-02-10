@@ -237,7 +237,6 @@ button.secondary:hover {
 }
 
 /* ========== FORM ERRORS ========== */
-
 .form-item--error-message,
 .error,
 .form-error {
@@ -302,6 +301,7 @@ button.secondary:hover {
     box-shadow: 0 4px 12px rgba(244, 67, 54, 0.25);
   }
 }
+
 
 input.error,
 textarea.error,
